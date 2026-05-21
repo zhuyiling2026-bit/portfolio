@@ -780,12 +780,223 @@ IF invalid_count >= 3:
         <div class="work-toggle">+</div>
       </div>
       <div class="work-body">
-        <div class="coming-soon">
-          <div class="coming-soon-icon">⏳</div>
-          <div class="coming-soon-text">
-            <strong>即将更新 · Coming Soon</strong>
-            本作品正在撰写中，预计近期上线
+        <div class="work-content">
+
+          <div class="case-intro">
+            <div class="case-stat">
+              <div class="case-stat-label">功能名称</div>
+              <div class="case-stat-val">DataLink<br>数据-实验追踪系统</div>
+            </div>
+            <div class="case-stat">
+              <div class="case-stat-label">目标用户</div>
+              <div class="case-stat-val">ML工程师<br>数据标注员 · 算法研究员</div>
+            </div>
+            <div class="case-stat">
+              <div class="case-stat-label">文档类型</div>
+              <div class="case-stat-val">产品需求文档（PRD）<br>功能从0到1设计</div>
+            </div>
           </div>
+
+          <!-- 需求来源 -->
+          <div class="case-section">
+            <h3>需求来源 · 真实痛点</h3>
+            <div class="badcase" style="border-left-color: var(--accent);">
+              <div class="badcase-tag" style="color:var(--accent);">需求洞察</div>
+              <h4>数据标注员的「黑盒感」——做了贡献，却看不见结果</h4>
+              <p>在参与字节跳动大模型数据标注项目时，我完成了大量语料标注工作，但始终无法得知：这批数据被哪个版本的实验使用了？标注质量对模型效果有多大影响？哪类数据对训练效果提升最显著？</p>
+              <p style="margin-top:8px;">这种「数据→训练→结果」的断层，不只影响标注员的参与感，更让算法工程师难以追溯实验效果与数据质量之间的关系——当模型表现下降时，无法快速定位是数据问题还是算法问题。</p>
+            </div>
+          </div>
+
+          <!-- 问题定义 -->
+          <div class="case-section">
+            <h3>问题定义</h3>
+            <div class="badcase-list">
+              <div class="badcase">
+                <div class="badcase-tag">痛点 01 · 数据侧</div>
+                <h4>标注数据与训练实验之间缺乏可见的关联关系</h4>
+                <p>标注员完成数据交付后，无法得知数据流向与使用状态；算法工程师启动训练时，也难以快速检索「哪批数据曾用于类似实验」，造成数据资产的重复生产与浪费。</p>
+              </div>
+              <div class="badcase">
+                <div class="badcase-tag">痛点 02 · 实验侧</div>
+                <h4>多实验并行时，实验配置与结果难以系统性管理</h4>
+                <p>ML工程师同时跑多个训练实验时，依赖本地文档或口头约定记录实验参数、数据版本和指标结果，缺乏统一的实验管理入口，导致经验无法沉淀、复盘困难。</p>
+              </div>
+              <div class="badcase">
+                <div class="badcase-tag">痛点 03 · 协作侧</div>
+                <h4>数据团队与算法团队之间信息不透明，协作成本高</h4>
+                <p>数据团队不了解模型训练的优先级变化，算法团队也无法实时感知数据供给状态，双方需要通过大量沟通对齐进度，协作效率低下。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 目标用户 -->
+          <div class="case-section">
+            <h3>目标用户</h3>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+              <div style="background:var(--bg3); border:1px solid var(--line); border-radius:var(--r); padding:18px 20px;">
+                <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--accent3); letter-spacing:0.08em; margin-bottom:8px;">PRIMARY USER</div>
+                <div style="font-size:15px; font-weight:600; margin-bottom:6px;">ML 工程师</div>
+                <div style="font-size:13px; color:var(--muted); line-height:1.7;">核心诉求：快速找到历史实验的数据配置，复用成功经验，追溯效果波动原因</div>
+              </div>
+              <div style="background:var(--bg3); border:1px solid var(--line); border-radius:var(--r); padding:18px 20px;">
+                <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--accent2); letter-spacing:0.08em; margin-bottom:8px;">SECONDARY USER</div>
+                <div style="font-size:15px; font-weight:600; margin-bottom:6px;">数据标注员</div>
+                <div style="font-size:13px; color:var(--muted); line-height:1.7;">核心诉求：了解自己标注的数据被哪些实验使用，获得质量反馈，提升标注积极性</div>
+              </div>
+              <div style="background:var(--bg3); border:1px solid var(--line); border-radius:var(--r); padding:18px 20px;">
+                <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--green); letter-spacing:0.08em; margin-bottom:8px;">TERTIARY USER</div>
+                <div style="font-size:15px; font-weight:600; margin-bottom:6px;">算法研究员</div>
+                <div style="font-size:13px; color:var(--muted); line-height:1.7;">核心诉求：横向对比多组实验结果，分析数据质量与模型指标的相关性</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 产品目标 -->
+          <div class="case-section">
+            <h3>产品目标</h3>
+            <div style="background:var(--bg3); border:1px solid var(--line); border-radius:var(--r); padding:24px 28px;">
+              <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent); letter-spacing:0.1em; margin-bottom:12px; text-transform:uppercase;">北极星指标</div>
+              <div style="font-size:18px; font-weight:600; margin-bottom:16px;">实验-数据关联覆盖率达 90% 以上</div>
+              <div style="font-size:14px; color:var(--muted);">即：平台上 90% 的训练实验能够在系统中完整追溯其使用的数据集版本、标注质量分布与关键指标结果。</div>
+              <div style="margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                <div style="border-top:1px solid var(--line); padding-top:12px;">
+                  <div style="font-size:13px; color:var(--muted); margin-bottom:4px;">工程师侧</div>
+                  <div style="font-size:14px;">实验配置检索耗时 <strong style="color:var(--accent)">↓50%</strong></div>
+                </div>
+                <div style="border-top:1px solid var(--line); padding-top:12px;">
+                  <div style="font-size:13px; color:var(--muted); margin-bottom:4px;">数据侧</div>
+                  <div style="font-size:14px;">数据重复生产率 <strong style="color:var(--accent)">↓30%</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 功能设计 -->
+          <div class="case-section">
+            <h3>功能设计 · 核心模块</h3>
+            <div class="solution-list">
+
+              <div class="solution">
+                <div class="solution-tag">模块 01 · 实验档案卡</div>
+                <h4>每个训练实验自动生成结构化档案，记录完整上下文</h4>
+                <p>工程师发起训练任务时，系统自动关联并记录：所用数据集版本、数据量与质量分布、关键超参数配置、训练结果指标（Loss / Accuracy / 业务指标）。档案卡支持手动补充备注与标签，实验经验可沉淀复用。</p>
+                <div class="prompt-sample">
+                  <div class="prompt-sample-label">用户故事</div>
+                  <pre><span class="hl">作为 ML 工程师，</span>
+我希望在发起新实验时，能直接搜索并引用
+历史相似实验的数据配置，
+<span class="hl">以便</span>复用已验证的数据方案，减少重复探索成本。
+
+<span class="cm">验收标准：</span>
+✓ 搜索结果支持按数据集版本、任务类型、时间筛选
+✓ 引用历史配置时，系统自动提示版本差异
+✓ 引用操作 3 步以内完成</pre>
+                </div>
+              </div>
+
+              <div class="solution">
+                <div class="solution-tag">模块 02 · 数据流向追踪</div>
+                <h4>标注数据从产出到使用的全链路可视化</h4>
+                <p>每批标注数据完成交付后，系统自动追踪其被哪些实验引用、在各实验中的使用比例，以及关联实验的最终效果指标。标注员可在个人工作台查看自己数据的"流向图"，算法团队可反向定位"哪批数据对效果贡献最大"。</p>
+                <div class="prompt-sample">
+                  <div class="prompt-sample-label">用户故事</div>
+                  <pre><span class="hl">作为数据标注员，</span>
+我希望在完成一批标注任务后，
+能看到这批数据被哪个实验版本使用，
+<span class="hl">以便</span>了解自己的贡献，并根据模型反馈
+持续改进标注质量。
+
+<span class="cm">验收标准：</span>
+✓ 数据状态：待使用 / 训练中 / 已完成 实时可见
+✓ 关联实验的核心指标对标注员可见（脱敏处理）
+✓ 质量评分变化趋势图可查看</pre>
+                </div>
+              </div>
+
+              <div class="solution">
+                <div class="solution-tag">模块 03 · 实验对比看板</div>
+                <h4>多实验横向对比，快速定位效果差异的数据归因</h4>
+                <p>研究员可选择多个实验版本进行并排对比，系统高亮展示数据配置差异与指标差异的关联关系，辅助判断效果波动是否由数据质量或数据分布变化引起。</p>
+                <div class="prompt-sample">
+                  <div class="prompt-sample-label">用户故事</div>
+                  <pre><span class="hl">作为算法研究员，</span>
+我希望在模型指标下降时，
+能快速对比本次实验与上次实验的数据差异，
+<span class="hl">以便</span>在1小时内判断是数据问题还是算法问题，
+而非花2天逐一排查。
+
+<span class="cm">验收标准：</span>
+✓ 支持最多 4 个实验并排对比
+✓ 数据差异自动高亮（新增 / 删除 / 比例变化）
+✓ 支持导出对比报告为 PDF</pre>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 优先级 -->
+          <div class="case-section">
+            <h3>需求优先级排序</h3>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="display:grid; grid-template-columns:80px 1fr 100px 120px; gap:12px; padding:10px 16px; font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase; border-bottom:1px solid var(--line);">
+                <span>优先级</span><span>功能</span><span>用户价值</span><span>实现复杂度</span>
+              </div>
+              <div style="display:grid; grid-template-columns:80px 1fr 100px 120px; gap:12px; padding:12px 16px; background:var(--bg3); border-radius:8px; align-items:center;">
+                <span style="font-family:'DM Mono',monospace; font-size:11px; color:var(--green); font-weight:600;">P0</span>
+                <span style="font-size:14px;">实验档案卡自动生成与关联</span>
+                <span style="font-size:13px; color:var(--muted);">极高</span>
+                <span style="font-size:13px; color:var(--muted);">中</span>
+              </div>
+              <div style="display:grid; grid-template-columns:80px 1fr 100px 120px; gap:12px; padding:12px 16px; background:var(--bg3); border-radius:8px; align-items:center;">
+                <span style="font-family:'DM Mono',monospace; font-size:11px; color:var(--green); font-weight:600;">P0</span>
+                <span style="font-size:14px;">数据状态实时追踪（待用/训练中/完成）</span>
+                <span style="font-size:13px; color:var(--muted);">高</span>
+                <span style="font-size:13px; color:var(--muted);">低</span>
+              </div>
+              <div style="display:grid; grid-template-columns:80px 1fr 100px 120px; gap:12px; padding:12px 16px; background:var(--bg3); border-radius:8px; align-items:center;">
+                <span style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent); font-weight:600;">P1</span>
+                <span style="font-size:14px;">历史实验配置检索与引用</span>
+                <span style="font-size:13px; color:var(--muted);">高</span>
+                <span style="font-size:13px; color:var(--muted);">中</span>
+              </div>
+              <div style="display:grid; grid-template-columns:80px 1fr 100px 120px; gap:12px; padding:12px 16px; background:var(--bg3); border-radius:8px; align-items:center;">
+                <span style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent); font-weight:600;">P1</span>
+                <span style="font-size:14px;">标注员数据流向可视化工作台</span>
+                <span style="font-size:13px; color:var(--muted);">中</span>
+                <span style="font-size:13px; color:var(--muted);">中</span>
+              </div>
+              <div style="display:grid; grid-template-columns:80px 1fr 100px 120px; gap:12px; padding:12px 16px; background:var(--bg3); border-radius:8px; align-items:center;">
+                <span style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); font-weight:600;">P2</span>
+                <span style="font-size:14px;">多实验横向对比看板</span>
+                <span style="font-size:13px; color:var(--muted);">中</span>
+                <span style="font-size:13px; color:var(--muted);">高</span>
+              </div>
+              <div style="display:grid; grid-template-columns:80px 1fr 100px 120px; gap:12px; padding:12px 16px; background:var(--bg3); border-radius:8px; align-items:center;">
+                <span style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); font-weight:600;">P2</span>
+                <span style="font-size:14px;">实验对比报告 PDF 导出</span>
+                <span style="font-size:13px; color:var(--muted);">低</span>
+                <span style="font-size:13px; color:var(--muted);">低</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 不做什么 -->
+          <div class="case-section">
+            <h3>范围说明 · 本期不做什么</h3>
+            <p style="font-size:14px; color:var(--muted); line-height:1.85;">
+              本期 <strong style="color:var(--text)">不包含</strong>：模型训练本身的调度功能（属于训练平台核心能力，另立项）、数据标注工具的改造（属于标注平台范畴）、面向外部企业客户的开放 API（属于商业化阶段规划）。聚焦在「数据与实验的关联追踪和可见性」这一核心场景，避免范围蔓延。
+            </p>
+          </div>
+
+          <!-- 反思 -->
+          <div class="case-section">
+            <h3>设计反思</h3>
+            <p>这篇 PRD 的需求来源于我在大模型数据标注岗位的真实体验——作为数据生产者，却对数据的去向和价值一无所知。这种「黑盒感」不仅影响标注积极性，更是 ML 平台效率提升的隐性障碍。</p>
+            <p>在功能设计上，我刻意把「标注员」列为次要用户，将其流向追踪功能纳入 P1 优先级，而非边缘化处理——因为数据生产侧的正向反馈机制，是保障数据质量持续优化的关键杠杆，这往往是纯工程视角容易忽视的部分。</p>
+          </div>
+
         </div>
       </div>
     </div>
