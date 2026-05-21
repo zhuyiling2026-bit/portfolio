@@ -466,7 +466,7 @@ footer p {
             </div>
             <div class="case-stat">
               <div class="case-stat-label">我的角色</div>
-              <div class="case-stat-val">AI语音产品实习生<br>独立负责 Prompt 设计与迭代</div>
+              <div class="case-stat-val">AI语音产品实习生<br>参与完成 Prompt 设计与迭代</div>
             </div>
           </div>
 
@@ -474,7 +474,7 @@ footer p {
           <div class="case-section">
             <h3>业务背景</h3>
             <p>负责为快递公司搭建 AI 语音助手，主要承担两类业务：<strong style="color:var(--text)">快递通知</strong>（主动拨出，告知货物到达，预约取件/收货时间）和<strong style="color:var(--text)">投诉申诉客服</strong>（被动接入，全流程推动用户完成投诉）。</p>
-            <p>系统基于大语言模型 + ASR 语音识别构建，Prompt 是控制模型行为的核心手段。我独立负责多个客户项目的 Prompt 撰写、版本管理与持续调优，累计迭代 20+ 版次。</p>
+            <p>系统基于大语言模型 + ASR 语音识别构建，Prompt 是控制模型行为的核心手段。参与完成多个客户项目的 Prompt 撰写、版本管理与持续调优，累计迭代 20+ 版次。</p>
           </div>
 
           <!-- Badcases -->
@@ -622,12 +622,146 @@ IF invalid_count >= 3:
         <div class="work-toggle">+</div>
       </div>
       <div class="work-body">
-        <div class="coming-soon">
-          <div class="coming-soon-icon">⏳</div>
-          <div class="coming-soon-text">
-            <strong>即将更新 · Coming Soon</strong>
-            本作品正在撰写中，预计近期上线
+        <div class="work-content">
+
+          <div class="case-intro">
+            <div class="case-stat">
+              <div class="case-stat-label">分析对象</div>
+              <div class="case-stat-val">豆包 vs. Claude<br>vs. ChatGPT vs. DeepSeek</div>
+            </div>
+            <div class="case-stat">
+              <div class="case-stat-label">分析视角</div>
+              <div class="case-stat-val">深度用户 · 持续使用<br>6个月以上</div>
+            </div>
+            <div class="case-stat">
+              <div class="case-stat-label">核心结论</div>
+              <div class="case-stat-val">豆包的差异化路径：<br>「生活伙伴」而非「思维工具」</div>
+            </div>
           </div>
+
+          <!-- 分析框架 -->
+          <div class="case-section">
+            <h3>分析背景与方法</h3>
+            <p>作为 Claude、ChatGPT、豆包、DeepSeek 的重度用户，我在日常工作、学术与生活场景中持续交叉使用以上产品超过6个月。本报告从<strong style="color:var(--text)">产品定位、核心能力、用户体验、差异化策略</strong>四个维度展开，结合真实使用场景对豆包进行深度拆解，并提出产品机会点。</p>
+          </div>
+
+          <!-- 产品定位 -->
+          <div class="case-section">
+            <h3>核心发现 · 定位差异</h3>
+            <div class="badcase-list">
+              <div class="badcase" style="border-left-color: var(--accent2);">
+                <div class="badcase-tag" style="color:var(--accent2);">竞品定位图谱</div>
+                <h4>四款产品形成了清晰的定位分层</h4>
+                <p>经过长期交叉使用，我观察到四款产品在用户心智中形成了明显的使用场景分工：</p>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px;">
+                  <div style="background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:14px 16px;">
+                    <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--accent); letter-spacing:0.08em; margin-bottom:6px;">豆包</div>
+                    <div style="font-size:14px; font-weight:600; margin-bottom:4px;">生活伙伴</div>
+                    <div style="font-size:13px; color:var(--muted);">生活琐事、快速解答、随手一问；免费门槛低，亲切感强</div>
+                  </div>
+                  <div style="background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:14px 16px;">
+                    <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--accent3); letter-spacing:0.08em; margin-bottom:6px;">Claude</div>
+                    <div style="font-size:14px; font-weight:600; margin-bottom:4px;">思维伙伴</div>
+                    <div style="font-size:13px; color:var(--muted);">工作、学术、深度写作；思辨性强，表达详尽严谨</div>
+                  </div>
+                  <div style="background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:14px 16px;">
+                    <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--accent2); letter-spacing:0.08em; margin-bottom:6px;">ChatGPT</div>
+                    <div style="font-size:14px; font-weight:600; margin-bottom:4px;">全能助手</div>
+                    <div style="font-size:13px; color:var(--muted);">生态最完整，插件/图像/代码全覆盖；品牌认知度最高</div>
+                  </div>
+                  <div style="background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:14px 16px;">
+                    <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--green); letter-spacing:0.08em; margin-bottom:6px;">DeepSeek</div>
+                    <div style="font-size:14px; font-weight:600; margin-bottom:4px;">推理专家</div>
+                    <div style="font-size:13px; color:var(--muted);">数理逻辑、代码推理；国产高性价比，技术向用户首选</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 豆包优势 -->
+          <div class="case-section">
+            <h3>豆包核心优势拆解</h3>
+            <div class="solution-list">
+              <div class="solution">
+                <div class="solution-tag">优势 01 · 语言风格</div>
+                <h4>最接地气的中文表达，真实建立「伙伴感」</h4>
+                <p>豆包的回答风格明显区别于其他产品的「助手腔」——语气自然、口语化，更像是朋友在聊天而非工具在回复。这种风格在生活场景（问天气穿搭、推荐餐厅、聊日常疑惑）中极大降低了用户的心理距离，提升了持续使用的意愿。</p>
+                <p style="margin-top:8px;"><strong style="color:var(--text)">产品逻辑：</strong>字节系产品深谙内容消费心理，将「信息流亲切感」的设计语言迁移到了对话AI上，这是其他产品难以快速复制的基因优势。</p>
+              </div>
+              <div class="solution">
+                <div class="solution-tag">优势 02 · 多模态能力</div>
+                <h4>识图+生图的多模态矩阵，覆盖日常视觉需求</h4>
+                <p>豆包的多模态能力在国产AI产品中属于第一梯队，识图理解能力在日常场景（识别菜品、解析截图、理解图表）中表现稳定，生图功能也能满足基础需求。对于非专业用户，这个能力组合已经足够日用。</p>
+                <p style="margin-top:8px;"><strong style="color:var(--text)">横向对比：</strong>生图质量与 Claude、ChatGPT（DALL·E）相比仍有差距，精细度和美学表现明显逊色，但免费策略使其在用量上取得优势。</p>
+              </div>
+              <div class="solution">
+                <div class="solution-tag">优势 03 · 免费策略</div>
+                <h4>零门槛获客，构建高频使用习惯</h4>
+                <p>完全免费是豆包最强的增长武器。对于高频但低复杂度的生活场景查询，用户不会为此付费——豆包恰好覆盖了这个「值得问但不值得付钱问」的需求区间，形成了差异化的用户分层。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 豆包劣势 -->
+          <div class="case-section">
+            <h3>豆包核心问题拆解</h3>
+            <div class="badcase-list">
+              <div class="badcase">
+                <div class="badcase-tag">问题 01 · 幻觉率偏高</div>
+                <h4>事实性错误出现频率高于竞品，可信度存疑</h4>
+                <p>在实际使用中，豆包出现幻觉（生成错误事实信息）的频率明显高于 Claude 和 ChatGPT。在涉及具体数据、人名、日期等事实性查询时，需要额外验证。这直接限制了豆包在学术和工作场景的可用性。</p>
+                <p style="margin-top:8px;"><strong style="color:var(--text)">影响：</strong>用户形成「豆包说的要再查一遍」的认知，降低了在高可信度场景的使用意愿，强化了「只用于生活琐事」的用户心智。</p>
+              </div>
+              <div class="badcase">
+                <div class="badcase-tag">问题 02 · 过度顺从，缺乏辩证性</div>
+                <h4>倾向于顺着用户说，而非提供独立批判视角</h4>
+                <p>豆包存在明显的「顺着用户话茬走」的倾向——当用户的前提预设存在问题时，豆包往往不会指出，而是在错误前提下继续作答。相比之下，Claude 会主动标注假设的不确定性并提供反向论据。</p>
+                <p style="margin-top:8px;"><strong style="color:var(--text)">根因推测：</strong>可能与偏向用户满意度的 RLHF 训练策略有关——「用户觉得舒服」的回答在反馈中得到更高奖励，导致模型系统性地规避对用户的纠正。</p>
+              </div>
+              <div class="badcase">
+                <div class="badcase-tag">问题 03 · 深度写作能力不足</div>
+                <h4>口语化风格是双刃剑，在复杂表达场景中成为劣势</h4>
+                <p>豆包的口语化风格在生活场景是优势，但在需要严密论证、结构化输出的写作任务（学术报告、产品分析、方案文档）中，表现明显弱于 Claude。内容深度、逻辑层次和语言精准度都有差距。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 机会点 -->
+          <div class="case-section">
+            <h3>产品机会点</h3>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="background:var(--bg3); border:1px solid var(--line); border-radius:var(--r); padding:20px 24px; display:flex; gap:16px; align-items:flex-start;">
+                <div style="font-family:'DM Mono',monospace; font-size:20px; color:var(--accent); min-width:28px; padding-top:2px;">①</div>
+                <div>
+                  <div style="font-size:15px; font-weight:600; margin-bottom:6px;">引入「可信度标注」机制</div>
+                  <div style="font-size:14px; color:var(--muted); line-height:1.75;">对模型置信度较低的事实性内容主动标注「建议验证」，降低幻觉带来的信任损耗，提升用户在专业场景的使用意愿。</div>
+                </div>
+              </div>
+              <div style="background:var(--bg3); border:1px solid var(--line); border-radius:var(--r); padding:20px 24px; display:flex; gap:16px; align-items:flex-start;">
+                <div style="font-family:'DM Mono',monospace; font-size:20px; color:var(--accent); min-width:28px; padding-top:2px;">②</div>
+                <div>
+                  <div style="font-size:15px; font-weight:600; margin-bottom:6px;">设计「场景切换」模式</div>
+                  <div style="font-size:14px; color:var(--muted); line-height:1.75;">在「生活闲聊模式」之外，提供「深度思考模式」——切换后回答风格更严谨、会主动质疑前提，覆盖用户偶发的工作/学术需求而不破坏日常体验。</div>
+                </div>
+              </div>
+              <div style="background:var(--bg3); border:1px solid var(--line); border-radius:var(--r); padding:20px 24px; display:flex; gap:16px; align-items:flex-start;">
+                <div style="font-family:'DM Mono',monospace; font-size:20px; color:var(--accent); min-width:28px; padding-top:2px;">③</div>
+                <div>
+                  <div style="font-size:15px; font-weight:600; margin-bottom:6px;">强化生图质量，缩小与一线产品的差距</div>
+                  <div style="font-size:14px; color:var(--muted); line-height:1.75;">当前生图质量是豆包多模态体验的短板。提升美学精细度和提示词理解能力，将「能用」升级为「好用」，进一步巩固多模态日常场景的护城河。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 总结 -->
+          <div class="case-section">
+            <h3>结论</h3>
+            <p>豆包的成功在于找到了一个竞争对手尚未充分占据的心智位置：<strong style="color:var(--text)">中文互联网用户日常生活中的轻量 AI 伙伴</strong>。免费策略 + 亲切语言风格 + 多模态能力，构成了差异化的产品组合。</p>
+            <p>然而，过度顺从和幻觉问题形成了一道隐形的天花板——用户信任豆包处理「无所谓对不对」的生活问题，却不敢用它处理「必须准确」的工作问题。如何在保留「伙伴感」的同时提升可信度，是豆包破圈的核心命题。</p>
+          </div>
+
         </div>
       </div>
     </div>
