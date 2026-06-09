@@ -167,6 +167,7 @@ section { padding: 96px 48px; }
 .badge-blue   { background: rgba(126,184,201,0.12); color: var(--accent2); border: 1px solid rgba(126,184,201,0.2); }
 .badge-gold   { background: rgba(201,168,76,0.12);  color: var(--accent);  border: 1px solid rgba(201,168,76,0.2); }
 .badge-soon   { background: rgba(122,120,112,0.12); color: var(--muted);   border: 1px solid rgba(122,120,112,0.2); }
+.badge-green  { background: rgba(106,184,126,0.12); color: var(--green);  border: 1px solid rgba(106,184,126,0.2); }
 
 .work-title { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
 .work-desc  { font-size: 13px; color: var(--muted); margin-top: 4px; }
@@ -995,6 +996,107 @@ IF invalid_count >= 3:
             <h3>设计反思</h3>
             <p>这篇 PRD 的需求来源于我在大模型数据标注岗位的真实体验——作为数据生产者，却对数据的去向和价值一无所知。这种「黑盒感」不仅影响标注积极性，更是 ML 平台效率提升的隐性障碍。</p>
             <p>在功能设计上，我刻意把「标注员」列为次要用户，将其流向追踪功能纳入 P1 优先级，而非边缘化处理——因为数据生产侧的正向反馈机制，是保障数据质量持续优化的关键杠杆，这往往是纯工程视角容易忽视的部分。</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ WORK 4: Recall App ══ -->
+    <div class="work-card" id="card4">
+      <div class="work-header" onclick="toggle('card4')">
+        <div class="work-meta">
+          <span class="work-num">04</span>
+          <span class="work-badge badge-green">全栈开发</span>
+        </div>
+        <div style="flex:1; min-width:0;">
+          <div class="work-title">Recall · AI 驱动的个人内容收藏与知识管理工具</div>
+          <div class="work-desc">从 0 到 1 独立完成的全栈应用 — React 前端 · Express 后端 · Supabase 数据库 · DeepSeek AI 分析</div>
+        </div>
+        <div class="work-toggle">+</div>
+      </div>
+      <div class="work-body">
+        <div class="work-content">
+
+          <div class="case-intro">
+            <div class="case-stat">
+              <div class="case-stat-label">项目类型</div>
+              <div class="case-stat-val">独立全栈开发<br>Vibe Coding 实践</div>
+            </div>
+            <div class="case-stat">
+              <div class="case-stat-label">技术栈</div>
+              <div class="case-stat-val">React · Zustand<br>Express · Supabase · DeepSeek</div>
+            </div>
+            <div class="case-stat">
+              <div class="case-stat-label">部署</div>
+              <div class="case-stat-val">Vercel (前端)<br>Railway (后端)</div>
+            </div>
+          </div>
+
+          <!-- 产品定位 -->
+          <div class="case-section">
+            <h3>产品定位</h3>
+            <p>Recall 是一款面向知识工作者和内容消费者的<strong style="color:var(--text)">AI 内容收藏工具</strong>。用户粘贴任意网页链接，AI 自动抓取、分析、总结内容，生成标题、摘要、分类和标签，一键收藏到个人知识库中。</p>
+            <p>核心差异化在于<strong style="color:var(--text)">「AI 自动分类 + 用户自定义管理」</strong>的双轨制：AI 智能分析确保低摩擦入库，用户可随时修改分类、标签，确保知识库始终贴合个人认知体系。</p>
+          </div>
+
+          <!-- 功能亮点 -->
+          <div class="case-section">
+            <h3>功能亮点</h3>
+            <div class="badcase-list">
+
+              <div class="badcase">
+                <div class="badcase-tag">亮点 01 · AI 智能分析</div>
+                <h4>链接粘贴 → AI 分析 → 一键收藏，三步完成</h4>
+                <p>基于 DeepSeek API 自研分析 Pipeline：网页抓取 → 正文提取 → 结构化分析（标题 / 摘要 / 分类 / 标签）。支持中英文混合内容，摘要控制在 80 字以内。</p>
+              </div>
+
+              <div class="badcase">
+                <div class="badcase-tag">亮点 02 · 多用户隔离</div>
+                <h4>基于 Supabase Auth 的完整用户体系，数据完全隔离</h4>
+                <p>JWT 鉴权中间件 + 数据库行级过滤，确保每个用户只能看到自己的收藏内容。支持快速保存接口（iOS Share Extension 场景）。</p>
+              </div>
+
+              <div class="badcase">
+                <div class="badcase-tag">亮点 03 · 用户自定义分类</div>
+                <h4>每用户独立管理分类标签，云端同步跨设备</h4>
+                <p>支持增删改分类标签，后端存储 + 前端缓存的双层架构。内置「Other」分类自动收纳未匹配内容，用户可随时手动调整内容归属。</p>
+              </div>
+
+              <div class="badcase">
+                <div class="badcase-tag">亮点 04 · 交互打磨</div>
+                <h4>阅读状态追踪、定时提醒、回收站、2秒撤销删除</h4>
+                <p>已读/未读状态管理，基于创建时间的 3天/7天/30天 分级提醒标签。删除操作带 2 秒倒计时撤销机制，回收站 3 天自动清理。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 技术决策 -->
+          <div class="case-section">
+            <h3>关键设计决策</h3>
+            <div class="badcase-list">
+
+              <div class="badcase">
+                <div class="badcase-tag" style="color:var(--accent);">决策 01 · 前端分类 vs 后端分类</div>
+                <h4>从 localStorage 演进到后端存储</h4>
+                <p>初版将分类标签存储在浏览器 localStorage 中，快速上线但发现两个问题：不同设备不同步、同一浏览器多账号共享标签。二版重构为 Supabase 存储 + API 驱动，实现真正的按用户隔离和跨设备同步。</p>
+              </div>
+
+              <div class="badcase">
+                <div class="badcase-tag" style="color:var(--accent);">决策 02 · AI 分析架构</div>
+                <h4>预览-确认两阶段模式，降低 AI 调用浪费</h4>
+                <p>AI 分析返回预览结果，用户确认后才写入数据库。避免用户对分析结果不满意时产生冗余写入，同时允许用户在确认前修改分类、标题等内容。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 反思 -->
+          <div class="case-section">
+            <h3>项目反思</h3>
+            <p>这个项目是我在 <strong style="color:var(--text)">Vibe Coding</strong> 范式下的完整实践：利用 Claude Code 等 AI 编程工具，从需求定义、技术选型、前后端开发到部署运维，一个人完成全部环节。</p>
+            <p>最大的体悟是：AI 辅助编程的核心不是「让 AI 写代码」，而是<strong style="color:var(--text)">「产品思维 + 工程判断 + AI 执行」</strong>的三位一体。AI 可以快速生成大量代码，但架构决策（如分类存储从 localStorage 到后端的演进）、用户体验打磨（如 2 秒撤销倒计时）、以及安全性设计（如 JWT 鉴权 + 行级过滤），仍然需要人的产品判断和工程经验来驱动。</p>
           </div>
 
         </div>
